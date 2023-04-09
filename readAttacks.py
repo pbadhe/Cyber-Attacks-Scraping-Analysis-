@@ -41,9 +41,9 @@ def launchBrowser(noOfPages, searchFor):
 	driver.get(link)
 
 	#Comment below three lines to search for the whole website
-	# elements = WebDriverWait(driver, 20).until(EC.visibility_of_all_elements_located((By.XPATH, "//*[@class='form-input w-full text-dark']")))
-	# elements[0].click()
-	# elements[0].send_keys(searchFor,)
+	elements = WebDriverWait(driver, 20).until(EC.visibility_of_all_elements_located((By.XPATH, "//*[@class='form-input w-full text-dark']")))
+	elements[0].click()
+	elements[0].send_keys(searchFor,)
 
 	time.sleep(2)
 
@@ -89,7 +89,6 @@ def launchBrowser(noOfPages, searchFor):
 		pass	
 
 
-noOfPages = 133 #Attention!
-searchFor = "ALL"
+noOfPages = 141 #Attention!
+searchFor = ""
 launchBrowser(noOfPages, searchFor)
-
